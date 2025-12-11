@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANNI FRONTEND PROJECT & GAME</title>
+    <link rel="stylesheet" href="sanni.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="" class="logo">
+            <ul>
+                <li><a href="./tictac.html" target="_blank">TIC TAC TOE GAME</a></li>
+                <li><a href="#">SKILLS</a></li>
+                <li><a href="#">PROJECT</a></li>
+                <li><a href="./sannigame.html" target="_blank">CHILDHOOD GAME</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="left-col">
+                <h1>COME<br>FUN <br> WITH <br>SOUND</h1>
+            </div>
+            <div class="right-col">
+                <p>Click Here to listen</p>
+                <img src="play.png" id="icon">
+            </div>
+        </div>
+
+        <!-- Music Player Section -->
+        <div class="music-player">
+            <div class="player-container">
+                <div class="song-info">
+                    <div class="album-art">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="song-details">
+                        <h3 id="song-title">Aaj Ki Raat</h3>
+                        <p id="artist-name">Unknown Artist</p>
+                    </div>
+                </div>
+                
+                <!-- Progress Bar -->
+                <div class="progress-container">
+                    <span id="current-time">0:00</span>
+                    <div class="progress-bar" id="progress-bar">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                    <span id="duration">0:00</span>
+                </div>
+                
+                <!-- Controls -->
+                <div class="controls">
+                    <button class="control-btn" id="shuffle-btn" title="Shuffle">
+                        <i class="fas fa-random"></i>
+                    </button>
+                    <button class="control-btn" id="prev-btn" title="Previous">
+                        <i class="fas fa-step-backward"></i>
+                    </button>
+                    <button class="control-btn play-btn" id="play-pause-btn" title="Play/Pause">
+                        <i class="fas fa-play" id="play-icon"></i>
+                    </button>
+                    <button class="control-btn" id="next-btn" title="Next">
+                        <i class="fas fa-step-forward"></i>
+                    </button>
+                    <button class="control-btn" id="repeat-btn" title="Repeat">
+                        <i class="fas fa-redo"></i>
+                    </button>
+                </div>
+                
+                <!-- Volume Control -->
+                <div class="volume-container">
+                    <i class="fas fa-volume-up" id="volume-icon"></i>
+                    <input type="range" id="volume-slider" min="0" max="100" value="70">
+                </div>
+            </div>
+        </div>
+
+        <!-- Playlist Section -->
+        <div class="playlist-section">
+            <h2><i class="fas fa-list"></i> Playlist</h2>
+            <ul class="playlist" id="playlist">
+                <li class="playlist-item active" data-src="Aaj Ki Raat.mp3" data-title="Aaj Ki Raat" data-artist="Unknown Artist">
+                    <span class="song-number">1</span>
+                    <div class="song-info-list">
+                        <span class="song-name">Aaj Ki Raat</span>
+                        <span class="song-artist">Unknown Artist</span>
+                    </div>
+                    <i class="fas fa-play playing-icon"></i>
+                </li>
+                <li class="playlist-item" data-src="song2.mp3" data-title="Song 2" data-artist="Artist 2">
+                    <span class="song-number">2</span>
+                    <div class="song-info-list">
+                        <span class="song-name">Song 2</span>
+                        <span class="song-artist">Artist 2</span>
+                    </div>
+                    <i class="fas fa-play playing-icon"></i>
+                </li>
+                <li class="playlist-item" data-src="song3.mp3" data-title="Song 3" data-artist="Artist 3">
+                    <span class="song-number">3</span>
+                    <div class="song-info-list">
+                        <span class="song-name">Song 3</span>
+                        <span class="song-artist">Artist 3</span>
+                    </div>
+                    <i class="fas fa-play playing-icon"></i>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Audio Visualizer -->
+        <div class="visualizer-container">
+            <canvas id="visualizer"></canvas>
+        </div>
+
+    </div>
+    
+    <audio id="mysong">
+        <source src="Aaj Ki Raat.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="sanni.js"></script>
+
+</body>
+
+</html>
